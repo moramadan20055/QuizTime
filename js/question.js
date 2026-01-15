@@ -170,12 +170,12 @@ export default class Question {
       btnClicked.classList.add("correct");
       currentQuiz.score++;
       console.log(currentQuiz.score);
-      let corrctSound = new Audio("/Audio/correct-6033.mp3");
+      let corrctSound = new Audio("./Audio/correct-6033.mp3");
       corrctSound.play();
     } else {
       console.log("Wrong");
       btnClicked.classList.add("wrong");
-      let WrongSound = new Audio("/Audio/wronganswer-37702.mp3");
+      let WrongSound = new Audio("./Audio/wronganswer-37702.mp3");
       WrongSound.play();
     }
     this.answerd = true;
@@ -258,7 +258,7 @@ export default class Question {
       if (this.timeRemaining <= 5) {
         timerBadge.classList.add("warning");
         if (!this.warningPlayed) {
-          const timerAudio = new Audio("/Audio/5-second.mp3");
+          const timerAudio = new Audio("./Audio/5-second.mp3");
           timerAudio.play();
           this.warningPlayed = true;
         }
@@ -384,3 +384,4 @@ export default class Question {
   // 3. Wait for duration
   // 4. Call getNextQuestion()
 }
+
